@@ -1,0 +1,162 @@
+
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap');
+
+h1 {
+    font-size: 24px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+h2{
+    font-size: 24px;
+    color: white;
+}
+h4 {
+    color: white;
+}
+
+p {
+    font-family: 'Montserrat';
+    color: black;
+    font-size: 18px;
+
+}
+
+
+.container {
+    width: '100%';
+    height: '100%';
+}
+
+.center-div{
+    display: flex;
+    padding: 20px;
+    justify-content:center; 
+    align-items: center;
+    height: '100vh';
+}
+
+
+.landing-page-container {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    width: '100%';
+    height: '100%';
+    background-repeat: no-repeat;
+    background-color:  #333;
+    padding-bottom: 150px;
+    /* background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%); */
+}
+
+.welcome-text {
+    font-weight: 400;
+    line-height: 72px;
+    padding-top: 200px;
+    font-weight: 400;
+}
+
+.red-border{
+    border-bottom: 3px solid #e66c7e;
+
+}
+.search-container {
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: white; */
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    flex-direction: row;
+    width: '90%';
+    height: 500px;
+    overflow: hidden;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-color: #333;
+    padding-bottom: 20px;
+    /* background-image: url('https://images.unsplash.com/photo-1492250817888-f4ea0ed5d3f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2389&q=80'); */
+}
+
+.country-information {
+    background-image: url('https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1301&q=80');
+    width: '100%';
+    height: auto;
+    padding-bottom: 50px;
+
+}
+
+.country-img-style {
+    width:350px;
+    height: 200px;
+    text-align:center;
+}
+
+.white-card {
+    text-align: center;
+    padding-top: 20px;
+    width: 700px;
+    height: auto;
+    background-color: white;
+    color: black !important;
+}
+
+
+.input {
+    text-align: center;
+    width: '100%';
+    height: 70px;
+    font-size:30px;
+    border-radius:10px;
+    
+}
+
+/* WHEN THE SCREEN WIDTH IS WIDER THAN 768px, USE THEESE STYLES */
+  @media (min-width: 768px){ 
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    h1 {
+        font-size: 95px;
+        font-family: 'Cormorant Garamond', serif;
+    }
+    h2 {
+        font-size: 50px;
+    }
+    .input {
+        width: 700px;
+    } 
+
+    .country-information {
+        background-image: url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2249&q=80');
+        width: '100%';
+        height: auto;
+    }
+
+    .welcome-text {
+        font-weight: 400;
+        line-height: 72px;
+        padding-top: 200px;
+        font-weight: 400;
+        letter-spacing: 15px;
+
+    }
+    .search-container {
+        height: 700px;
+    }
+
+    .country-img-style {
+        width:700px;
+        height: 300px;
+        text-align:center;
+    }
+  } 
