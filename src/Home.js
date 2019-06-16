@@ -58,8 +58,6 @@ export default class Home extends React.Component {
     render (){
         return(
         <div>
-            {/* <AnimatedText/> */}
-
             {/* SEARCH BAR */}
             <SearchBar  value={this.state.value}  handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
 
