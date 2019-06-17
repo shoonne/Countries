@@ -35,7 +35,7 @@ export default class Home extends React.Component {
       // When the user presses the submit button
       handleSubmit(event) {
         var searchInput = this.state.value
-        // You could also use string templates but I'm taking the easy route here :)
+        // You could also use string interpolations but I'm taking the easy route here :)
        if(searchInput !== ''){
         fetch('https://restcountries.eu/rest/v2/name/' + searchInput)
         .then(response => response.json())
@@ -63,14 +63,15 @@ export default class Home extends React.Component {
     render (){
         return(
         <div>
-            {/* SEARCH BAR */}
 
+            {/* SEARCH BAR */}
             <SearchBar  
             value={this.state.value}  
             handleChange={this.handleChange} 
             onChangeCheckBox={this.onClickCapital}
-            handleSubmit={this.handleSubmit}/>            
-            {/* Show the view if the data has loaded */}
+            handleSubmit={this.handleSubmit}/>  
+
+            {/* If the data has loaded, render the information */}
             {this.state.dataLoaded ? 
 
             <div className='country-information'>
