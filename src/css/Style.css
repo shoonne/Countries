@@ -21,9 +21,7 @@ p {
     font-family: 'Montserrat';
     color: black;
     font-size: 18px;
-
 }
-
 
 .container {
     width: '100%';
@@ -59,7 +57,6 @@ p {
 
 .red-border{
     border-bottom: 3px solid #e66c7e;
-
 }
 .search-container {
     /* border-style: solid;
@@ -101,7 +98,6 @@ p {
     color: black !important;
 }
 
-
 .input {
     text-align: center;
     width: '100%';
@@ -109,6 +105,19 @@ p {
     font-size:30px;
     border-radius:10px;
     
+}
+
+.search-button{
+    background-color:white; 
+    height:70px;
+    width:200px;
+    margin-left: 20px ;
+}
+
+.footer-text {
+    font-size:12px; 
+    text-align: center;
+    padding: 10px,
 }
 
 /* WHEN THE SCREEN WIDTH IS WIDER THAN 768px, USE THEESE STYLES */
@@ -131,6 +140,10 @@ p {
     }
     h2 {
         font-size: 50px;
+    }
+
+    h4 {
+        font-size: 25px;
     }
     .input {
         width: 700px;

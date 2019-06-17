@@ -18,7 +18,7 @@ export default class Home extends React.Component {
               value: '',
               currency: 'SEK',
               dataLoaded: false,
-              searchBy: ''
+              searchByCapital: false
           };
 
           this.handleChange = this.handleChange.bind(this);
@@ -39,7 +39,12 @@ export default class Home extends React.Component {
        if(searchInput !== ''){
         fetch('https://restcountries.eu/rest/v2/name/' + searchInput)
         .then(response => response.json())
-        .then(data => this.setState({data: data, currency: data[0].currencies[0].code, dataLoaded: true, }))
+        .then(data => this.setState(
+            {
+                data: data, 
+                currency: data[0].currencies[0].code, 
+                dataLoaded: true, 
+            }))
         .catch(error => this.setState({ error, dataLoaded: false }));
         event.preventDefault();
        } else {
@@ -50,7 +55,7 @@ export default class Home extends React.Component {
      // Use this toggle to change the url to filter the search   
       onClickCapital = () => {
           this.setState({
-              searchBy: 'Capital'
+              searchByCapital: !this.state.searchByCapital
           })
       }
 
@@ -59,8 +64,12 @@ export default class Home extends React.Component {
         return(
         <div>
             {/* SEARCH BAR */}
-            <SearchBar  value={this.state.value}  handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
 
+            <SearchBar  
+            value={this.state.value}  
+            handleChange={this.handleChange} 
+            onChangeCheckBox={this.onClickCapital}
+            handleSubmit={this.handleSubmit}/>            
             {/* Show the view if the data has loaded */}
             {this.state.dataLoaded ? 
 
@@ -72,13 +81,13 @@ export default class Home extends React.Component {
             :
             // Else show the placeholder
             <div className="landing-page-container">
-                <h4>Learn About Your Destination and compare the local currency</h4>
+                <h4>Learn About Your Destination And Compare The Local Currency</h4>
             </div> 
             }
 
             {/* FOOTER */}
             <div>
-                <p style={{fontSize:'12px', textAlign:'center', padding: '10px',}}>Note: We dont support all currencies</p>
+                <p className="footer-text">Note: We dont support all currencies</p>
             </div>
         
 
